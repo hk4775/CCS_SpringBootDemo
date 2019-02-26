@@ -8,8 +8,7 @@ node {
          cd target
          cp ../src/main/resources/web.config web.config
          cp ccs-rest-service-0.1.0.jar app.jar 
-         apt-get install zip
-         zip ccs.zip app.jar web.config
+         jar -cf ccs.zip app.jar web.config
       '''
    }
    stage('deploy') {
