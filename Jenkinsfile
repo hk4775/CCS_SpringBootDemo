@@ -14,7 +14,7 @@ node {
    stage('deploy') {
       azureWebAppPublish azureCredentialsId: env.AZURE_CRED_ID,
       resourceGroup: env.RES_GROUP, appName: env.WEB_APP, filePath: "**/ccs.zip"
-      println ${appName}
-      println ${resourceGroup}
+      println env.WEB_APP
+      println env.RES_GROUP
    }
 }
