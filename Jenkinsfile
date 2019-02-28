@@ -13,6 +13,7 @@ node {
    }
    stage('deploy') {
       azureWebAppPublish azureCredentialsId: env.AZURE_CRED_ID,
-      resourceGroup: env.RES_GROUP, appName: env.WEB_APP, filePath: "**/ccs.zip"
+      resourceGroup: env.RES_GROUP, appName: env.WEB_APP, filePath: "**/ccs-rest-service-0.1.0.jar"
+	  sourceDirectory: 'target', targetDirectory: 'webapps'
    }
 }
