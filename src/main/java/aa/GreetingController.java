@@ -19,6 +19,6 @@ public class GreetingController {
     }
     @RequestMapping("/")
     public String index(){
-        return "Welcome to Azure";
+        return "Welcome to CCS";
     }
 }
